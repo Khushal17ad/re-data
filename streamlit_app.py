@@ -14,8 +14,9 @@ import analysis
 
 def main():
     norway_data = pd.read_csv('./data/Vindkraftverk.csv')
-
-    st.dataframe(norway_data)
+    
+    print (norway_data)
+    st.table(norway_data)
 
 if __name__ == "__main__":
     main()
