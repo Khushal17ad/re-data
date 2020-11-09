@@ -11,7 +11,7 @@ import os
 
 def main():
     norway_data = pd.read_csv('./data/Vindkraftverk.csv',engine='python',
-    error_bad_lines=False)
+    error_bad_lines=False, sep = ';')
     
     #print (norway_data)
     st.table(norway_data)
