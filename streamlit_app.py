@@ -3,15 +3,15 @@
 import numpy as np  
 import pandas as pd  
 
-
 #%matplotlib inline  
 
 import streamlit as st
 import os
 
+import analysis
+
 def main():
-    norway_data = pd.read_csv('./data/Vindkraftverk.csv',engine='python',
-    error_bad_lines=False, sep = ';')
+    norway_data = analysis.get_data()
     
     #print (norway_data)
     st.table(norway_data)
