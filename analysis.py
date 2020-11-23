@@ -27,6 +27,7 @@ def get_data():
     norway_data['point'] = norway_data['location'].apply(lambda loc: tuple(loc.point) if loc else None)
 
     norway_data['lat'] = norway_data['point'].apply(lambda x : x[0] if x else None)
+    norway_data['lon'] = norway_data['point'].apply(lambda x : x[1] if x else None)
     #norway_data[['latitude', 'longitude', 'altitude']] = pd.DataFrame(norway_data['point'].tolist()) #, index=norway_data.index
     #norway_data['location'] = norway_data['Fylke(r)'].apply(lambda x: convert_location_to_coords(x))
     return norway_data
