@@ -20,6 +20,8 @@ def get_data():
 
     geolocator = Nominatim(user_agent="Your_Name")
     geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
+    
+    norway_data['Fylke(r)'].apply(lambda x : x.split(',')[0])
     norway_data['location'] = norway_data['Fylke(r)'].apply(geocode)
 
     norway_data['point'] = norway_data['location'].apply(lambda loc: tuple(loc.point) if loc else None)
