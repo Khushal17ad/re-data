@@ -15,7 +15,7 @@ def convert_location_to_coords(name):
     long = location.longitude
     return location,lat,long
 
-def get_data():
+def get_data_old():
     norway_data = pd.read_csv('./data/Vindkraftverk.csv',engine='python',error_bad_lines=False, sep = ';')
 
     geolocator = Nominatim(user_agent="Your_Name")
@@ -31,6 +31,11 @@ def get_data():
     #norway_data[['latitude', 'longitude', 'altitude']] = pd.DataFrame(norway_data['point'].tolist()) #, index=norway_data.index
     #norway_data['location'] = norway_data['Fylke(r)'].apply(lambda x: convert_location_to_coords(x))
     #pd.to_csv('norway_edited_data.csv')
+
+    return norway_data
+
+def get_data():
+    norway_data = pd.read_csv('./data/norway_edited_data.csv',engine='python',error_bad_lines=False, sep = ';')
 
     return norway_data
 
