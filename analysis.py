@@ -30,7 +30,7 @@ def get_data():
     norway_data['lon'] = norway_data['point'].apply(lambda x : x[1] if x else None)
     #norway_data[['latitude', 'longitude', 'altitude']] = pd.DataFrame(norway_data['point'].tolist()) #, index=norway_data.index
     #norway_data['location'] = norway_data['Fylke(r)'].apply(lambda x: convert_location_to_coords(x))
-    pd.to_csv('norway_edited_data.csv')
+    #pd.to_csv('norway_edited_data.csv')
 
     return norway_data
 
