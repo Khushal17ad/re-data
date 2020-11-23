@@ -1,7 +1,8 @@
   
 # import the required libraries
 import numpy as np  
-import pandas as pd  
+import pandas as pd
+import plotly.express as px
 
 #%matplotlib inline  
 
