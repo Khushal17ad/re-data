@@ -4,6 +4,8 @@ from geopy.geocoders import Nominatim
 
 
 def convert_location_to_coords(name):
+
+    name = name.split(',')[0]
     geolocator = Nominatim(user_agent="Your_Name")
     location = geolocator.geocode(name)
     return location
