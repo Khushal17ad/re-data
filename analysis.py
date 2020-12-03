@@ -30,7 +30,7 @@ def get_data_old():
     norway_data['lon'] = norway_data['point'].apply(lambda x : x[1] if x else None)
 
     
-    column_names = ['year_commissioned','installed_pwoer_total_MW','main_owner','owner_org_number','county',
+    column_names = ['power','year_commissioned','installed_power_total_MW','main_owner','owner_org_number','county',
                 'kommune','avg_annual_prodcution_GWH','avg_generation_power_MW','avg_hub_height_M','avg_rotor_diameter_M',
                 'energy_per_swept_area_KWH_m2','operating_turbines','location','point','lat','lon']
 
