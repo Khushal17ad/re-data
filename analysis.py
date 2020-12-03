@@ -16,7 +16,7 @@ def convert_location_to_coords(name):
     return location,lat,long
 
 def get_data_old():
-    norway_data = pd.read_csv('./data/Vindkraftverk.csv',engine='python',error_bad_lines=False, sep = ';', encoding = 'utf-8')
+    norway_data = pd.read_csv('./data/Vindkraftverk.csv',engine='python',error_bad_lines=False, sep = ';')
 
     geolocator = Nominatim(user_agent="Your_Name")
     geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
