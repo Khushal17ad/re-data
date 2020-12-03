@@ -12,7 +12,7 @@ import os
 import analysis
 
 def main():
-    norway_data = analysis.get_data()
+    norway_data = analysis.get_data_old()
     
     #print (norway_data)
     st.table(norway_data)
