@@ -15,7 +15,7 @@ def main():
     norway_data = analysis.get_data()
     
     #print (norway_data)
-    #st.table(norway_data)
+    st.table(norway_data)
 
     fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="Fylke(r)", hover_data=["Kraftverksnavn"],
                         color_discrete_sequence=["fuchsia"], zoom=3, height=300, size_max = 10)
