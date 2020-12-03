@@ -31,13 +31,13 @@ def get_data_old():
 
     norway_data.reset_index(inplace=True)
 
-    column_names = ['power_plant_name','year_commissioned','random,'installed_power_total_MW','main_owner','owner_org_number','county',
+    column_names = ['power_plant_name','year_commissioned','random','installed_power_total_MW','main_owner','owner_org_number','county',
                 'kommune','avg_annual_prodcution_GWH','avg_generation_power_MW','avg_hub_height_M','avg_rotor_diameter_M',
                 'energy_per_swept_area_KWH_m2','operating_turbines','location','point','lat','lon']
 
     power_plant_name
     norway_data.columns = column_names
-    
+
     #norway_data[['latitude', 'longitude', 'altitude']] = pd.DataFrame(norway_data['point'].tolist()) #, index=norway_data.index
     #norway_data['location'] = norway_data['Fylke(r)'].apply(lambda x: convert_location_to_coords(x))
     #pd.to_csv('norway_edited_data.csv')
