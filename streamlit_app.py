@@ -18,7 +18,7 @@ def main():
     st.table(norway_data)
 
     fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="kommune", hover_data=['year_commissioned'],color = 'avg_annual_prodcution_GWH',
-                        color_continuous_scale = px.colors.sequential.Viridis, zoom=3, height=300, size_max = 20)
+                        color_continuous_scale = px.colors.sequential.Viridis, size_max = 40, zoom=3, height=3000)
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     fig.show()
