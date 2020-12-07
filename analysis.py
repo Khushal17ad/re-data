@@ -28,6 +28,7 @@ def get_data_old():
 
     norway_data['lat'] = norway_data['point'].apply(lambda x : x[0] if x else None)
     norway_data['lon'] = norway_data['point'].apply(lambda x : x[1] if x else None)
+    norway_data['avg_annual_prodcution_GWH'] = norway_data['avg_annual_prodcution_GWH'].apply(lamda x : x if x else 10)
 
     norway_data.reset_index(inplace=True)
 
