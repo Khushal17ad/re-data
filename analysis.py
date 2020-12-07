@@ -28,8 +28,7 @@ def get_data_old():
 
     norway_data['lat'] = norway_data['point'].apply(lambda x : x[0] if x else None)
     norway_data['lon'] = norway_data['point'].apply(lambda x : x[1] if x else None)
-    norway_data['avg_annual_prodcution_GWH'] = norway_data['avg_annual_prodcution_GWH'].apply(lamda x : x if x else 10)
-
+    
     norway_data.reset_index(inplace=True)
 
     column_names = ['power_plant_name','year_commissioned','installed_power_total_MW','main_owner','owner_org_number','county',
@@ -38,6 +37,8 @@ def get_data_old():
 
     
     norway_data.columns = column_names
+
+    norway_data['avg_annual_prodcution_GWH'] = norway_data['avg_annual_prodcution_GWH'].apply(lamda x : x if x else 10)
 
     #norway_data[['latitude', 'longitude', 'altitude']] = pd.DataFrame(norway_data['point'].tolist()) #, index=norway_data.index
     #norway_data['location'] = norway_data['Fylke(r)'].apply(lambda x: convert_location_to_coords(x))
