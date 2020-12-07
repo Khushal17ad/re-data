@@ -17,6 +17,7 @@ def main():
     #print (norway_data)
     st.table(norway_data)
 
+    norway_data = norway_data.sort_values(by = 'year_commissioned')
     fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="kommune", hover_data=['year_commissioned'],color = 'avg_annual_prodcution_GWH',size = 'year_commissioned',
                         color_continuous_scale = px.colors.sequential.thermal, size_max = 10, zoom=3, height=500)
     fig.update_layout(mapbox_style="open-street-map")
