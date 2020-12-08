@@ -47,7 +47,7 @@ def get_data_old():
     return norway_data
 
 def get_data():
-    norway_data = pd.read_csv('./data/norway_edited_data.csv',engine='python',error_bad_lines=False, sep = ',')
+    norway_data = pd.read_csv('./data/norway_data.csv',engine='python',error_bad_lines=False, sep = ',')
 
     #norway_data.reset_index(inplace=True)
 
