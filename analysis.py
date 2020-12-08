@@ -66,6 +66,6 @@ def get_usgs_data():
 
     us_data_df = pd.DataFrame(us_data)
 
-    us_data_df.rename(columns = {'t_county' : 'county', 'xlong':'long', 'ylat':'lat'},inplace=True)
+    us_data_df.rename(columns = {'t_county' : 'county', 'xlong':'lon', 'ylat':'lat'},inplace=True)
 
     return us_data_df
