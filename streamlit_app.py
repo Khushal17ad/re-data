@@ -12,6 +12,10 @@ import os
 import analysis
 
 def main():
+
+    st.header('Energy Data')
+
+
     norway_data = analysis.get_data()
     
     #print (norway_data)
