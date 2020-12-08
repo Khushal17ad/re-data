@@ -31,7 +31,7 @@ def main():
 
         st.plotly_chart(fig)
 
-    elif:
+    elif country_option == 'USA':
         us_data = analysis.get_usgs_data()
 
         fig = px.scatter_mapbox(us_data, lat="lat", lon="lon", hover_name="county", hover_data=['case_id'],
