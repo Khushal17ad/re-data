@@ -49,11 +49,11 @@ def get_data_old():
 def get_data():
     norway_data = pd.read_csv('./data/norway_edited_data.csv',engine='python',error_bad_lines=False, sep = ',')
 
-    norway_data.reset_index(inplace=True)
+    #norway_data.reset_index(inplace=True)
 
     column_names = ['power_plant_name','year_commissioned','installed_power_total_MW','main_owner','owner_org_number','county',
                 'kommune','avg_annual_prodcution_GWH','avg_generation_power_MW','avg_hub_height_M','avg_rotor_diameter_M',
-                'energy_per_swept_area_KWH_m2','operating_turbines','location','point','lat','lon']
+                'energy_per_swept_area_KWH_m2','operating_turbines','random','location','point','lat','lon']
 
     print (norway_data.columns)
     norway_data.columns = column_names
