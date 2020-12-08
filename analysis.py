@@ -55,7 +55,7 @@ def get_data():
                 'kommune','avg_annual_prodcution_GWH','avg_generation_power_MW','avg_hub_height_M','avg_rotor_diameter_M',
                 'energy_per_swept_area_KWH_m2','operating_turbines','random','location','point','lat','lon']
 
-    
+    print (norway_data.columns)
     norway_data.columns = column_names
 
     return norway_data
