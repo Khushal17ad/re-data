@@ -20,7 +20,7 @@ def main():
     if country_option == 'Norway':
         norway_data = analysis.get_data()
         
-        #st.table(norway_data)
+        st.table(norway_data)
 
         norway_data = norway_data.sort_values(by = 'avg_annual_prodcution_GWH')
         fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="kommune", hover_data=['year_commissioned'],
