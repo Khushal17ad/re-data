@@ -23,7 +23,7 @@ def main():
         st.table(norway_data)
 
         norway_data = norway_data.sort_values(by = 'avg_annual_prodcution_GWH')
-        fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="kommune", hover_data=['year_commissioned'],
+        fig = px.scatter_mapbox(norway_data, lat="lat", lon="lon", hover_name="kommune", hover_data=['main_owner','year_commissioned','operating_turbines'],
                             size_max = 10, zoom=3, height=500 ) #color_continuous_scale = px.colors.sequential.Magenta color = 'avg_annual_prodcution_GWH',size = 'year_commissioned',
         fig.update_layout(mapbox_style="open-street-map")
         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
