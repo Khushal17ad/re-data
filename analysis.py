@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import requests
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 
@@ -46,7 +47,7 @@ def get_data_old():
 
     return norway_data
 
-def get_data():
+def get_norway_data():
     norway_data = pd.read_csv('./data/norway_data.csv',engine='python',error_bad_lines=False, sep = ',')
 
     #norway_data.reset_index(inplace=True)
@@ -60,4 +61,11 @@ def get_data():
 
     return norway_data
 
+def get_usgs_data():
+    us_data = requests.get('https://eersc.usgs.gov/api/uswtdb/v1/turbines?&p_year=gt.1980').json()
 
+    us_data_df = pd.DataFrame(us_data)
+
+    us_data_df.rename(columns = {'t_county' : 'county', 'xlong':'long', 'ylat':'lat'},inplace=True)
+
+    return us_data_df
