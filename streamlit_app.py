@@ -50,10 +50,12 @@ def main():
         norway_data = analysis.get_norway_data()
         us_data = analysis.get_usgs_data()
 
-        norway_data.append(us_data)
+        datasets = [norway_data, us_data]
 
-        st.table(norway_data.head())
-        st.table(norway_data.tail())
+        all_data = pd.concat(datasets)
+
+        st.table(all_data.head())
+        st.table(all_data.tail())
 
 
     else:
