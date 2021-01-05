@@ -33,6 +33,7 @@ def main():
 
     elif country_option == 'USA':
         us_data = analysis.get_usgs_data()
+
         st.table(us_data.head())
 
         fig = px.scatter_mapbox(us_data, lat="lat", lon="lon", hover_name="county", hover_data=['case_id'],
@@ -49,6 +50,10 @@ def main():
         norway_data = analysis.get_norway_data()
         us_data = analysis.get_usgs_data()
 
+        norway_data.append(us_data)
+
+        st.table(norway_data.head())
+        st.table(norway_data.head(-5))
 
 
     else:
