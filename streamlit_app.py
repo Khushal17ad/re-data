@@ -53,7 +53,7 @@ def main():
         norway_data.append(us_data)
 
         st.table(norway_data.head())
-        st.table(norway_data.head(-5))
+        st.table(norway_data.tail())
 
 
     else:
