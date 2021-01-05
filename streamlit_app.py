@@ -40,7 +40,13 @@ def main():
         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
         fig.show()
 
+        st.table(us_data)
         st.plotly_chart(fig)
+
+
+    elif country_option == 'All':
+        norway_data = analysis.get_norway_data()
+        us_data = analysis.get_usgs_data()
 
 
 
