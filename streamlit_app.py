@@ -33,7 +33,8 @@ def main():
 
     elif country_option == 'USA':
         us_data = analysis.get_usgs_data()
-        st.table(us_data)
+        st.table(us_data.head())
+
         fig = px.scatter_mapbox(us_data, lat="lat", lon="lon", hover_name="county", hover_data=['case_id'],
                             size_max = 10, zoom=3, height=500 ) #color_continuous_scale = px.colors.sequential.Magenta color = 'avg_annual_prodcution_GWH',size = 'year_commissioned',
         fig.update_layout(mapbox_style="open-street-map")
