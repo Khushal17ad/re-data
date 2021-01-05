@@ -58,7 +58,7 @@ def main():
         st.table(all_data.tail())
 
         fig = px.scatter_mapbox(all_data, lat="lat", lon="lon", hover_name="county", hover_data=['case_id'],
-                            size_max = 10, zoom=3, height=500 ) #color_continuous_scale = px.colors.sequential.Magenta color = 'avg_annual_prodcution_GWH',size = 'year_commissioned',
+                            size_max = 10, zoom=3, height=800 ) #color_continuous_scale = px.colors.sequential.Magenta color = 'avg_annual_prodcution_GWH',size = 'year_commissioned',
         fig.update_layout(mapbox_style="open-street-map")
         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
         fig.show()
