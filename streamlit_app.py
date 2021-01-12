@@ -34,19 +34,19 @@ def main():
 
         st.subheader('Year Wise Comparison of different properties')
 
-        property_option = st.sidebar.selectbox('Select the Property',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+        property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
-        if property_option == 'avg_hub_height_M':
-            property_option_label = "Average Hub Height (in metres)"
-            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, labels={
+        if property_option_label == 'Average Hub Height (in metres)':
+            property_option = "avg_hub_height_M"
+            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
             st.plotly_chart(fig1)
         else:
-            property_option_label = "Average Rotor Diameter (in metres)"
+            property_option = "avg_rotor_diameter_M"
 
-            fig1 = px.scatter(norway_data, x='operational_year', y=property_option, labels={
+            fig1 = px.scatter(norway_data, x='operational_year', y=property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -70,19 +70,19 @@ def main():
 
         st.subheader('Year Wise Comparison')
 
-        property_option = st.sidebar.selectbox('Select the property for year wise comparison',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+        property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
-        if property_option == 'avg_hub_height_M':
-            property_option_label = "Average Hub Height (in metres)"
-            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, labels={
+        if property_option_label == 'Average Hub Height (in metres)':
+            property_option = "avg_hub_height_M"
+            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
             st.plotly_chart(fig1)
         else:
-            property_option_label = "Average Rotor Diameter (in metres)"
+            property_option = "avg_rotor_diameter_M"
 
-            fig1 = px.scatter(us_data, x='operational_year', y=property_option, labels={
+            fig1 = px.scatter(us_data, x='operational_year', y=property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -112,17 +112,17 @@ def main():
 
         st.subheader('Country and Year Wise Comparison')
 
-        property_option = st.sidebar.selectbox('Select the property for year wise comparison',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+        property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
-        if property_option == 'avg_hub_height_M':
-            property_option_label = "Average Hub Height (in metres)"
+        if property_option_label == 'Average Hub Height (in metres)':
+            property_option = "avg_hub_height_M"
             fig1 = px.scatter(all_data, x = 'operational_year', y = property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
             st.plotly_chart(fig1)
         else:
-            property_option_label = "Average Rotor Diameter (in metres)"
+            property_option = "avg_rotor_diameter_M"
 
             fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
