@@ -90,7 +90,10 @@ def main():
 
     elif country_option == 'All':
         norway_data = analysis.get_norway_data()
+        norway_data['country'] = 'Norway'
+
         us_data = analysis.get_usgs_data()
+        us_data['country'] = 'USA'
 
         datasets = [norway_data, us_data]
 
@@ -106,6 +109,26 @@ def main():
         fig.show()
 
         st.plotly_chart(fig)
+
+        st.subheader('Country and Year Wise Comparison')
+
+        property_option = st.sidebar.selectbox('Select the property for year wise comparison',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+
+        if property_option == 'avg_hub_height_M':
+            property_option_label = "Average Hub Height (in metres)"
+            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, color = 'country', labels={
+                        "operational_year" : "Operational Year",
+                        property_option : property_option_label
+                    })
+            st.plotly_chart(fig1)
+        else:
+            property_option_label = "Average Rotor Diameter (in metres)"
+
+            fig1 = px.scatter(us_data, x='operational_year', y=property_option, color = 'country', labels={
+                        "operational_year" : "Operational Year",
+                        property_option : property_option_label
+                    })
+            st.plotly_chart(fig1)
 
 
     else:
