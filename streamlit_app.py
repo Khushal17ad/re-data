@@ -70,6 +70,8 @@ def main():
 
         st.subheader('Year Wise Comparison')
 
+        property_option = st.sidebar.selectbox('Select the Property',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+        
         if property_option == 'avg_hub_height_M':
             property_option_label = "Average Hub Height (in metres)"
             fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, labels={
