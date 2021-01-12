@@ -57,6 +57,9 @@ def main():
         
         us_data = analysis.get_usgs_data()
 
+        if(st.button("About")): 
+            st.text("Welcome To GeeksForGeeks!!!") 
+
         #st.table(us_data.head())
 
         fig = px.scatter_mapbox(us_data, lat="lat", lon="lon", hover_name="county", hover_data=['operational_year','operating_turbines'],
