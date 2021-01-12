@@ -13,7 +13,8 @@ import analysis
 
 def main():
 
-    st.header('Energy Data')
+    st.header('Renewable Energy Data')
+    st.text("")
 
     country_option = st.sidebar.selectbox('Select the Country',('All', 'Norway','USA'))
 
