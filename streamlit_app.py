@@ -32,7 +32,7 @@ def main():
 
         st.plotly_chart(fig)
 
-        st.subheader('Year Wise Comparison')
+        st.subheader('Year Wise Comparison of different properties')
 
         property_option = st.sidebar.selectbox('Select the Property',('avg_hub_height_M', 'avg_rotor_diameter_M'))
 
@@ -70,7 +70,7 @@ def main():
 
         st.subheader('Year Wise Comparison')
 
-        property_option = st.sidebar.selectbox('Select the Property',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+        property_option = st.sidebar.selectbox('Select the property for year wise comparison',('avg_hub_height_M', 'avg_rotor_diameter_M'))
 
         if property_option == 'avg_hub_height_M':
             property_option_label = "Average Hub Height (in metres)"
