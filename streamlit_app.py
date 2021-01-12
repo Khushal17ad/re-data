@@ -32,7 +32,7 @@ def main():
 
         st.plotly_chart(fig)
 
-        st.subheader('Year Wise Comparison of different properties')
+        st.subheader('Year-wise comparison of different properties')
 
         property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
@@ -68,9 +68,9 @@ def main():
         
         st.plotly_chart(fig)
 
-        st.subheader('Year Wise Comparison')
+        st.subheader('Year-wise comparison of different properties')
 
-        property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
+        property_option_label = st.sidebar.selectbox('Select the property for year-wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
         if property_option_label == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
@@ -110,9 +110,9 @@ def main():
 
         st.plotly_chart(fig)
 
-        st.subheader('Country and Year Wise Comparison')
+        st.subheader('Country and Year-wise comparison')
 
-        property_option_label = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
+        property_option_label = st.sidebar.selectbox('Select the property for year-wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
         if property_option_label == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
