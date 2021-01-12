@@ -34,7 +34,10 @@ def main():
 
         st.subheader('Year Wise Comparison')
 
-        fig1 = px.scatter(norway_data, x='operational_year', y='avg_hub_height_M')
+        fig1 = px.scatter(norway_data, x='operational_year', y='avg_hub_height_M', labels={
+                     "operational_year": "Operational Year",
+                     "avg_hub_height_M": "Average Hub Height (in metres)"
+                 })
         st.plotly_chart(fig1)
 
     elif country_option == 'USA':
@@ -56,7 +59,10 @@ def main():
 
         
 
-        fig1 = px.scatter(us_data, x='operational_year', y='avg_hub_height_M')
+        fig1 = px.scatter(us_data, x='operational_year', y='avg_hub_height_M',labels={
+                     "operational_year": "Operational Year",
+                     "avg_hub_height_M": "Average Hub Height (in metres)"
+                 })
         st.plotly_chart(fig1)
 
     elif country_option == 'All':
