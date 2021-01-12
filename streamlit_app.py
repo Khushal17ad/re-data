@@ -33,8 +33,7 @@ def main():
         st.plotly_chart(fig)
 
         st.subheader('Year Wise Comparison')
-        st.text("")
-        
+
         fig1 = px.scatter(norway_data, x='operational_year', y='avg_hub_height_M')
         st.plotly_chart(fig1)
 
@@ -54,7 +53,7 @@ def main():
         st.plotly_chart(fig)
 
         st.subheader('Year Wise Comparison')
-        st.text("")
+
         
 
         fig1 = px.scatter(us_data, x='operational_year', y='avg_hub_height_M')
