@@ -32,10 +32,14 @@ def main():
 
         st.plotly_chart(fig)
 
+        st.subheader('Year Wise Comparison')
+        st.text("")
+        
         fig1 = px.scatter(norway_data, x='operational_year', y='avg_hub_height_M')
         st.plotly_chart(fig1)
 
     elif country_option == 'USA':
+        
         us_data = analysis.get_usgs_data()
 
         #st.table(us_data.head())
@@ -48,6 +52,10 @@ def main():
 
         
         st.plotly_chart(fig)
+
+        st.subheader('Year Wise Comparison')
+        st.text("")
+        
 
         fig1 = px.scatter(us_data, x='operational_year', y='avg_hub_height_M')
         st.plotly_chart(fig1)
