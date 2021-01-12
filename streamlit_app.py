@@ -116,7 +116,7 @@ def main():
 
         if property_option == 'avg_hub_height_M':
             property_option_label = "Average Hub Height (in metres)"
-            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, color = 'country', labels={
+            fig1 = px.scatter(all_data, x = 'operational_year', y = property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -124,7 +124,7 @@ def main():
         else:
             property_option_label = "Average Rotor Diameter (in metres)"
 
-            fig1 = px.scatter(us_data, x='operational_year', y=property_option, color = 'country', labels={
+            fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country', labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
