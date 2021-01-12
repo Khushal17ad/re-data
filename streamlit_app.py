@@ -38,7 +38,7 @@ def main():
 
         if property_option_label == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
-            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, color = 'country', labels={
+            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -46,7 +46,7 @@ def main():
         else:
             property_option = "avg_rotor_diameter_M"
 
-            fig1 = px.scatter(norway_data, x='operational_year', y=property_option, color = 'country', labels={
+            fig1 = px.scatter(norway_data, x='operational_year', y=property_option, labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -77,7 +77,7 @@ def main():
 
         if property_option_label == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
-            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, color = 'country', labels={
+            fig1 = px.scatter(us_data, x = 'operational_year', y = property_option, labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -85,7 +85,7 @@ def main():
         else:
             property_option = "avg_rotor_diameter_M"
 
-            fig1 = px.scatter(us_data, x='operational_year', y=property_option, color = 'country', labels={
+            fig1 = px.scatter(us_data, x='operational_year', y=property_option, labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
