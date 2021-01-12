@@ -31,7 +31,7 @@ def main():
 
         st.plotly_chart(fig)
 
-        fig1 = px.scatter(us_data, x='operational_year', y='avg_rotor_diameter_M')
+        fig1 = px.scatter(norway_data, x='operational_year', y='avg_rotor_diameter_M')
         st.plotly_chart(fig1)
 
     elif country_option == 'USA':
