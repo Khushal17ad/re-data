@@ -34,11 +34,24 @@ def main():
 
         st.subheader('Year Wise Comparison')
 
-        fig1 = px.scatter(norway_data, x='operational_year', y='avg_hub_height_M', labels={
-                     "operational_year": "Operational Year",
-                     "avg_hub_height_M": "Average Hub Height (in metres)"
-                 })
-        st.plotly_chart(fig1)
+        property_option = st.sidebar.selectbox('Select the Property',('avg_hub_height_M', 'avg_rotor_diameter_M'))
+
+        if property_option == 'avg_hub_height_M':
+            property_option_label = "Average Hub Height (in metres)"
+            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, labels={
+                        "operational_year" : "Operational Year",
+                        property_option : property_option_label
+                    })
+            st.plotly_chart(fig1)
+        else:
+            property_option_label = "Average Rotor Diameter (in metres)"
+
+            fig1 = px.scatter(norway_data, x='operational_year', y=property_option, labels={
+                        "operational_year" : "Operational Year",
+                        property_option : property_option_label
+                    })
+            st.plotly_chart(fig1)
+
 
     elif country_option == 'USA':
         
