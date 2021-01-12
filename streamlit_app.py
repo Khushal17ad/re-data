@@ -110,7 +110,7 @@ def main():
 
         st.plotly_chart(fig)
 
-        st.subheader('Country and Year-wise comparison')
+        st.subheader('Country and Year-wise comparison of different properties')
 
         property_option_label = st.sidebar.selectbox('Select the property for year-wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
