@@ -52,7 +52,7 @@ def get_norway_data():
 
     #norway_data.reset_index(inplace=True)
 
-    column_names = ['power_plant_name','year_commissioned','installed_power_total_MW','main_owner','owner_org_number','county',
+    column_names = ['power_plant_name','operational_year','installed_power_total_MW','main_owner','owner_org_number','county',
                 'kommune','avg_annual_prodcution_GWH','avg_generation_power_MW','avg_hub_height_M','avg_rotor_diameter_M',
                 'energy_per_swept_area_KWH_m2','operating_turbines','random','location','point','lat','lon']
 
@@ -66,6 +66,23 @@ def get_usgs_data():
 
     us_data_df = pd.DataFrame(us_data)
 
-    us_data_df.rename(columns = {'t_county' : 'county', 'xlong':'lon', 'ylat':'lat'},inplace=True)
+    us_data_df.rename(columns = {'t_county' : 'county', 
+                                    'xlong':'lon', 
+                                    'ylat':'lat',
+                                    't_state' : 'state',
+                                    'p_name' : 'power_plant_name',
+                                    'p_year' : 'operational_year',
+                                    'p_tnum' : 'operating_turbines',
+                                    'p_cap' : 'installed_power_total_MW',
+                                    't_manu' : 'turbine_manufacturer',
+                                    't_model' : 'turbine_model',
+                                    't_hh' : 'avg_hub_height_M',
+                                    't_rd' : 'avg_rotor_diameter_M',
+                                    't_rsa' : 'rotor swept area m2',
+                                    't_ttlh' : 'turbine_total_height',
+
+
+
+                        },inplace=True)
 
     return us_data_df
