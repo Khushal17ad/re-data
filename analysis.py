@@ -86,3 +86,21 @@ def get_usgs_data():
                         },inplace=True)
 
     return us_data_df
+
+def scatter_plot(property_option_label):
+    if property_option_label == 'Average Hub Height (in metres)':
+            property_option = "avg_hub_height_M"
+            fig1 = px.scatter(norway_data, x = 'operational_year', y = property_option, labels={
+                        "operational_year" : "Operational Year",
+                        property_option : property_option_label
+                    })
+            
+    else:
+        property_option = "avg_rotor_diameter_M"
+
+        fig1 = px.scatter(norway_data, x='operational_year', y=property_option, labels={
+                    "operational_year" : "Operational Year",
+                    property_option : property_option_label
+                })
+    
+    return fig1
