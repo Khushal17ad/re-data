@@ -36,7 +36,7 @@ def main():
 
         property_option_label_sidebar = st.sidebar.selectbox('Select the property for year wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)'))
 
-        fig1 = analysis.scatter_plot(property_option_label_sidebar)
+        fig1 = analysis.scatter_plot(property_option_label_sidebar, norway_data)
         st.plotly_chart(fig1)
 
     elif country_option == 'USA':
