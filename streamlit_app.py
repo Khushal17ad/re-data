@@ -58,7 +58,7 @@ def main():
 
         property_option_label_sidebar = st.sidebar.selectbox('Select the property for year-wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)','Total Installed Capacity (in MW)'))
 
-        fig1 = analysis.scatter_plot(property_option_label_sidebar, norway_data)
+        fig1 = analysis.scatter_plot(property_option_label_sidebar, us_data)
         st.plotly_chart(fig1)
 
 
@@ -88,7 +88,7 @@ def main():
 
         property_option_label_sidebar = st.sidebar.selectbox('Select the property for year-wise comparison',('Average Hub Height (in metres)', 'Average Rotor Diameter (in metres)','Total Installed Capacity (in MW)')) 
 
-        fig1 = analysis.scatter_plot(property_option_label_sidebar, norway_data)
+        fig1 = analysis.scatter_plot(property_option_label_sidebar, all_data)
         st.plotly_chart(fig1)
 
     else:
