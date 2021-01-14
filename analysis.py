@@ -91,8 +91,7 @@ def get_usgs_data():
 def scatter_plot(property_option_label, data_df):
     if property_option_label == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
-            fig1 = px.scatter(data_df, x = 'operational_year', y = property_option, color="country",
-                    labels={
+            fig1 = px.scatter(data_df, x = 'operational_year', y = property_option, labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -100,8 +99,7 @@ def scatter_plot(property_option_label, data_df):
     elif property_option_label == 'Average Rotor Diameter (in metres)':
         property_option = "avg_rotor_diameter_M"
 
-        fig1 = px.scatter(data_df, x='operational_year', y=property_option, color="country",
-                labels={
+        fig1 = px.scatter(data_df, x='operational_year', y=property_option, labels={
                     "operational_year" : "Operational Year",
                     property_option : property_option_label
                 })
@@ -109,8 +107,7 @@ def scatter_plot(property_option_label, data_df):
     else:
         property_option = "installed_power_total_MW"
 
-        fig1 = px.scatter(data_df, x='operational_year', y=property_option, color="country",
-                labels={
+        fig1 = px.scatter(data_df, x='operational_year', y=property_option, labels={
                     "operational_year" : "Operational Year",
                     property_option : property_option_label
                 })
