@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import requests
+import plotly.express as px
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 
