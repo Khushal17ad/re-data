@@ -92,7 +92,7 @@ def main():
         
         if property_option_label_sidebar == 'Average Hub Height (in metres)':
             property_option = "avg_hub_height_M"
-            fig1 = px.scatter(data_df, x = 'operational_year', y = property_option, color = 'country',labels={
+            fig1 = px.scatter(all_data, x = 'operational_year', y = property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -100,7 +100,7 @@ def main():
         elif property_option_label_sidebar == 'Average Rotor Diameter (in metres)':
             property_option = "avg_rotor_diameter_M"
 
-            fig1 = px.scatter(data_df, x='operational_year', y=property_option, color = 'country',labels={
+            fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
@@ -108,7 +108,7 @@ def main():
         else:
             property_option = "installed_power_total_MW"
 
-            fig1 = px.scatter(data_df, x='operational_year', y=property_option, color = 'country',labels={
+            fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
                         property_option : property_option_label
                     })
