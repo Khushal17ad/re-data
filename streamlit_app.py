@@ -94,7 +94,7 @@ def main():
             property_option = "avg_hub_height_M"
             fig1 = px.scatter(all_data, x = 'operational_year', y = property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
-                        property_option : property_option_label
+                        property_option : 'Average Hub Height (in metres)'
                     })
             
         elif property_option_label_sidebar == 'Average Rotor Diameter (in metres)':
@@ -102,7 +102,7 @@ def main():
 
             fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
-                        property_option : property_option_label
+                        property_option : 'Average Rotor Diameter (in metres)'
                     })
         
         else:
@@ -110,7 +110,7 @@ def main():
 
             fig1 = px.scatter(all_data, x='operational_year', y=property_option, color = 'country',labels={
                         "operational_year" : "Operational Year",
-                        property_option : property_option_label
+                        property_option : 'Total Installed Capacity (in MW)'
                     })
         
         st.plotly_chart(fig1)
