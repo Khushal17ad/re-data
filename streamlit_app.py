@@ -13,7 +13,7 @@ import analysis
 
 def main():
 
-    st.header('Renewable Energy Data')
+    st.header('Wind Energy Data')
     st.text("")
 
     country_option = st.sidebar.selectbox('Select the Country',('All', 'Norway','USA'))
@@ -120,7 +120,10 @@ def main():
 
     st.text("The data visualized in this web app is referenced from multiple data sources")
     st.markdown(
-    """<a href="https://www.hackerearth.com/challenges/competitive/shell-hackathon/?utm_source=shell&utm_medium=redirect&utm_content=target&utm-campaign=signupIconlistControl&utm_term=ExpA">Shell AI</a>""", unsafe_allow_html=True,
+    """<a href="https://www.nve.no/energiforsyning/kraftproduksjon/vindkraft/vindkraftdata/">Norway Data Source</a>""", unsafe_allow_html=True,
+    )
+    st.markdown(
+    """<a href="https://eerscmap.usgs.gov/uswtdb">US Data Source</a>""", unsafe_allow_html=True,
     )
 if __name__ == "__main__":
     main()
